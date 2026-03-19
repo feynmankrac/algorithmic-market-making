@@ -1,20 +1,32 @@
 ## Overview
-Implementation of a simplified algorithmic market making model inspired by Guéant, Lehalle and Fernandez-Tapia.
+This project analyzes the behavior of leveraged ETFs (SPXL / SPXS) and proposes a replication framework based on realized variance dynamics.
 
 ## Objective
-- Study the trade-off between spread capture and inventory risk
-- Analyze the impact of order arrival intensity on optimal quotes
-- Simulate PnL dynamics under different market conditions
+- Understand the sources of tracking error in leveraged ETFs
+- Model the impact of volatility drag
+- Compare replicated strategies with market ETFs
 
-## Current Status
-- Initial model implementation (simplified assumptions)
-- Simulation of order arrivals and inventory dynamics
-- Preliminary analysis of PnL distribution
+## Methodology
+- Variance-based analysis of leveraged ETF dynamics
+- Internal replication of leveraged exposure
+- Analysis of path dependency through return compounding effects
+- Performance and risk comparison against SPXL / SPXS
 
 ## Key Insights
-- Optimal quotes depend critically on inventory level and risk aversion
-- Inventory risk dominates PnL variability in low-liquidity regimes
-- Model assumptions (Poisson arrivals, constant volatility) strongly limit real-world applicability
+- Leveraged ETF performance strongly depends on the path of returns, not only on cumulative returns.
+- Volatility drag significantly erodes performance in high variance regimes, even when the underlying trend is favorable.
+- Simple variance-based replication captures part of the dynamics but fails to fully reproduce real ETF behavior due to rebalancing effects and transaction costs.
+- Tracking error increases during volatile periods, highlighting the limitations of static replication approaches.
 
-## Tech
-Python
+## Implementation
+- Python
+- Time series analysis
+- Backtesting framework
+
+## Results
+- Tracking error analysis
+- Volatility drag effects
+- Performance comparison with benchmark ETFs
+
+## Files
+- `Projet_ATFM_final.ipynb`: implementation and simulations
