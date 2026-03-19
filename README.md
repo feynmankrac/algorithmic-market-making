@@ -1,32 +1,30 @@
 ## Overview
-This project analyzes the behavior of leveraged ETFs (SPXL / SPXS) and proposes a replication framework based on realized variance dynamics.
+This project is a theoretical review of the paper *"Algorithmic market making: the case of equity derivatives"* by Guéant, Lehalle, and Fernandez-Tapia.
 
 ## Objective
-- Understand the sources of tracking error in leveraged ETFs
-- Model the impact of volatility drag
-- Compare replicated strategies with market ETFs
+- Understand the structure of optimal market making models
+- Analyze the role of inventory risk and quoting strategies
+- Study the HJB formulation of the problem
 
-## Methodology
-- Variance-based analysis of leveraged ETF dynamics
-- Internal replication of leveraged exposure
-- Analysis of path dependency through return compounding effects
-- Performance and risk comparison against SPXL / SPXS
+## Content
+- Model formulation (stochastic volatility framework)
+- Derivation of the Hamilton-Jacobi-Bellman (HJB) equation
+- Analysis of optimal bid/ask strategies
+- Discussion of simplifying assumptions (constant vega, no volatility view)
 
 ## Key Insights
-- Leveraged ETF performance strongly depends on the path of returns, not only on cumulative returns.
-- Volatility drag significantly erodes performance in high variance regimes, even when the underlying trend is favorable.
-- Simple variance-based replication captures part of the dynamics but fails to fully reproduce real ETF behavior due to rebalancing effects and transaction costs.
-- Tracking error increases during volatile periods, highlighting the limitations of static replication approaches.
-
-## Implementation
-- Python
-- Time series analysis
-- Backtesting framework
-
-## Results
-- Tracking error analysis
-- Volatility drag effects
-- Performance comparison with benchmark ETFs
+- Inventory risk is central in determining optimal quotes
+- Dimensionality reduction (via constant vega assumption) is key for tractability
+- Model assumptions (constant vega, perfect hedging) limit real-world applicability
+- Transaction costs and hedging constraints significantly impact practical implementation
 
 ## Files
-- `Projet_ATFM_final.ipynb`: implementation and simulations
+- `Project final.pdf`: detailed theoretical analysis and review
+
+## Reference
+- Guéant, O., Lehalle, C.-A., & Fernandez-Tapia, J.  
+  *Algorithmic market making: the case of equity derivatives*
+
+## Files
+- `Project final.pdf`: detailed theoretical analysis and review
+- `paper.pdf`: original research paper
